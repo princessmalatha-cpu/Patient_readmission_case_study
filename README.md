@@ -47,11 +47,6 @@ The top 4 features together account for over 75% of the model's decisions.
 ## Conclusion
 This project aimed to predict hospital readmission using patient demographic and clinical data. The baseline Random Forest model achieved 65% accuracy but only 8% recall for readmitted patients, missing 159 of 173 readmissions, which made it unsuitable for clinical use. Through threshold tuning and the use of class_weight='balanced_subsample', the final model improved recall to 92%, reducing missed readmissions to just 13, although this came at the cost of lower accuracy (33%) and precision (29%) due to a high number of false positives. Feature importance analysis showed that readmission was driven primarily by Blood Sugar Levels (22.5%), Blood Pressure (19.0%), Age (17.2%), and Length of Stay (16.6%), which together accounted for over 75% of the model's decisions. The model is therefore best used as a screening tool to flag high-risk patients for follow-up, rather than as a standalone discharge decision tool, and future work should explore richer data such as medication history and comorbidities to improve precision.
 
-## How to Run
-1. Open the notebook in Databricks.
-2. Click Run All.
-3. Check the final model outputs for threshold 0.35 and feature importance.
-
 ## Tools Used
 - Python, Pandas, Scikit-learn, Matplotlib
 - Databricks
